@@ -1,0 +1,21 @@
+<!---Interpolation: On remonte une donnée depuis le fichier TS vers le fichier HTML-->
+
+<h1>{{ welcome }}</h1>
+
+<!---Property binding: On remonte une donnée depuis le fichier TS vers le fichier HTML
+En l'occurance ici, une propriété [src] propre à la balise html <img> qui attends une url d'image, url que
+l'on a variabilisé "imgSrc" dans
+-->
+
+<img src="https://via.placeholder.com/350x150">
+<br/>
+<img [src]="imgSrc">
+
+<br/>
+<button (click)="isClicked()">Click here !</button>
+
+<br/>
+<p>"{{ user.quote }}"</p>
+<input type="text" [(ngModel)]="user.quote">
+
+<router-outlet></router-outlet>
